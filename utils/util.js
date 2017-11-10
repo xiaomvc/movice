@@ -27,7 +27,7 @@ function getMovices(msg, str, moviceTitle, obj) {
     for (var index in msg.data.subjects) {
         var temp = {
             id: msg.data.subjects[index].id,
-            title: msg.data.subjects[index].title,
+            title: msg.data.subjects[index].title.substring(0,8),
             image: msg.data.subjects[index].images.large,
             rating: msg.data.subjects[index].rating.average,
             star: msg.data.subjects[index].rating.stars,
@@ -41,6 +41,7 @@ function getMovices(msg, str, moviceTitle, obj) {
         moviceTitle: moviceTitle,
         movices: movices
     }
+	var aaa="";
     //为其绑定数据
     obj.setData(readyData);
 }

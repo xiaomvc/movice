@@ -35,5 +35,6 @@ App({
   },
   globalData: {
 	douBanUrl:"https://api.douban.com"
+
   }
 })

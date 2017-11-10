@@ -1,2 +1,11 @@
-<!--pages/movices/movice-more/movice-more.wxml-->
-<text>pages/movices/movice-more/movice-more.wxml</text>
+<import src="../movice-list/movice-list-template.wxml" />
+<!-- <scroll-view class="more-container" scroll-y="true" scroll-x="false" > -->
+<view class="more-container">
+    <block wx:for="{{moreMovice.movices}}">
+        <view class="more-movice">
+            <template is="movice-list" data="{{item}}" />
+        </view>
+    </block>
+</view>
+
+<!-- </scroll-view> -->

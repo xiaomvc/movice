@@ -1,1 +1,12 @@
-/* pages/movices/movice-more/movice-more.wxss */
+@import "../movice-list/movice-list-template.wxss";
+
+.more-container{
+	/* float: left; */
+	width:100%;
+	height: 1300rpx;
+
+}
+.more-movice{
+	/* width: 240rpx; */
+	float:left;
+}

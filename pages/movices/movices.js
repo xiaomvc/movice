@@ -55,7 +55,7 @@ Page({
         // console.log(event);
         var category = event.currentTarget.dataset.category;
         wx.navigateTo({
-            url: "movices-more/movices-more?category=" + category
+            url: "movice-more/movice-more?category=" + category
 
         })
     }

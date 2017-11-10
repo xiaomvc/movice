@@ -5,7 +5,7 @@
 
 .movice-nav{
 	display: flex;
-	flex-direction: 30rpx;
+	flex-direction: row;
 	margin-top: 30rpx;
 	margin-bottom: 20rpx;
 }
@@ -15,6 +15,7 @@
 }
 .moreMovice text:nth-child(1){
 	color: blue;
+	line-height: 30rpx;
 }
 
 .mving{
