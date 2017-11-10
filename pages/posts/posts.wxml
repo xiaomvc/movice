@@ -1,0 +1,19 @@
+<import src="post-item/post-item-template.wxml" />
+<view>
+   <swiper autoplay='true' interval='2000' indicator-dots='true' class='post-container'>
+      <swiper-item>
+         <image src="/images/post/bl.png" />
+      </swiper-item>
+      <swiper-item>
+         <image src="/images/post/cat.png" />
+      </swiper-item>
+      <swiper-item>
+         <image src="/images/post/crab.png" />
+      </swiper-item>
+   </swiper>
+   <block wx:for="{{newslist}}" wx:for-item='item' wx:for-index='index'>
+      <view id='{{index}}' class='post-news' catchtap="showNews" data-newsId='{{item.postId}}'>
+         <template is='newslist-template' data='{{...item,index}}'></template>
+      </view>
+   </block>
+</view>

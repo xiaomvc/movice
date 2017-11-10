@@ -1,0 +1,2 @@
+<text>{{news.id}}</text>
+<image src='/images/icon/share.png' catchtap="shareItem"></image>

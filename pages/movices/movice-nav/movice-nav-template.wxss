@@ -1,0 +1,35 @@
+/**index.wxss**/
+.list-container {
+    background-color: #fff;
+}
+
+.movice-nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30 rpx;
+    margin-bottom: 20 rpx;
+}
+
+.movice-nav text:nth-child(1) {
+    margin-left: 10 rpx;
+}
+
+.moreMovice text:nth-child(1) {
+    color: blue;
+}
+
+.mving {
+    width: 30 rpx;
+    height: 30 rpx;
+}
+
+.moreMovice {
+    position: absolute;
+    right: 20 rpx;
+    margin-top: -5 rpx;
+}
+
+.movice-container {
+    display: flex;
+    flex-direction: row;
+}

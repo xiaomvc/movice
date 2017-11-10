@@ -1,0 +1,8 @@
+<import src='movice-nav/movice-nav-template'/>
+<view class='movices'>
+
+<template is='movice-nav' data="{{...theaters}}"></template>
+<!-- <template is='movice-nav' data="{{...comingMV}}"></template>
+<template is='movice-nav' data="{{...top250}}"></template> -->
+
+</view>
