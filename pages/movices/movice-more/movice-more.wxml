@@ -1,11 +1,10 @@
 <import src="../movice-list/movice-list-template.wxml" />
-<!-- <scroll-view class="more-container" scroll-y="true" scroll-x="false" > -->
-<view class="more-container">
+<scroll-view class="more-container" scroll-y="true" scroll-x="false" bindscrolltolower="loadMore" lower-threshold="25rpx">
+
     <block wx:for="{{moreMovice.movices}}">
         <view class="more-movice">
             <template is="movice-list" data="{{item}}" />
         </view>
     </block>
-</view>
 
-<!-- </scroll-view> -->
+</scroll-view>

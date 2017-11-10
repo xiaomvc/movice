@@ -1,13 +1,14 @@
 @import "../movice-list/movice-list-template.wxss";
 .list-container{
 	background-color: #fff;
+	
 }
 
 .movice-nav{
 	display: flex;
 	flex-direction: row;
-	margin-top: 30rpx;
-	margin-bottom: 20rpx;
+	/* margin-top: 50rpx;*/
+	margin-bottom: 10rpx; 
 }
 
 .movice-nav text:nth-child(1){
@@ -21,6 +22,7 @@
 .mving{
 	width:30rpx;
 	height: 30rpx;
+	vertical-align: middle;
 }
 
 .moreMovice{

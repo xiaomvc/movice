@@ -6,7 +6,10 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		moreMovice: {}
+		moreMovice: {},
+		total: 0,
+		url: {},
+		isRefresh: true
 	},
 
 	/**
@@ -26,6 +29,7 @@ Page({
 				var url = "/v2/movie/top250";
 
 		}
+		this.data.url = url;//获取当前访问的地址
 		util.http(url, this, "moreMovice", category);
 	},
 
@@ -37,9 +41,26 @@ Page({
 			title: this.data.category,
 		})
 	},
-
+	/**
+	 * 下拉刷新
+	 */
 	onPullDownRefresh: function () {
-		console.log(111);
-		wx.startPullDownRefresh(console.log(123))
+		wx.startPullDownRefresh(
+			//重新加载数据
+			this.data.total = 0,
+			this.data.moreMovice = {},
+			util.http(this.data.url, this, "moreMovice")
+
+		)
+	},
+	//上拉更新更多
+	loadMore: function () {
+
+		this.data.total += 20;//每次添加的数量
+		//在导航栏中显示加载动画
+		wx.showNavigationBarLoading(),
+			util.http(this.data.url + "?start=" + this.data.total + "&count=20", this, "moreMovice", '', this.data.isRefresh),
+			wx.hideNavigationBarLoading()
+
 	}
 })

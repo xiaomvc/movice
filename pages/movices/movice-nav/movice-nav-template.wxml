@@ -5,15 +5,15 @@
             <text>{{moviceTitle}}</text>
             <view class="moreMovice" data-category="{{moviceTitle}}" catchtap="moreMovice">
                 <text>更多</text>
-                <image class="mving"  src="/images/icon/arrow-right.png"/>
+                <image class="mving" src="/images/icon/arrow-right.png" />
             </view>
         </view>
 
-         <view class='movice-container'>
+        <view class='movice-container'>
             <block wx:for="{{movices}}">
                 <template is="movice-list" data="{{item}}" />
             </block>
-        </view> 
+        </view>
     </view>
 
 </template>
