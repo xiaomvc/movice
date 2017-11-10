@@ -1,4 +1,4 @@
-/* *app.wxss*
+ /* *app.wxss* */
 .container {
   height: 100%;
   display: flex;
@@ -10,4 +10,4 @@
 } 
 text{
 	font-size: 14px;
-} */
+} 

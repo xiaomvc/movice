@@ -1,16 +1,16 @@
 @import "../movice-star/movice-star-template.wxss";
- .movice-list-continer {
-    display: flex;
-    flex-direction: row;
-} 
-
+ .movice-list-continer{
+	 display:flex;
+	 flex-direction: row;
+ }
 .movice-list{
-    display: flex;
-    flex-direction: column;
-    padding: 0 10rpx 5 rpx 10 rpx;
-}
+	display: flex;
+	flex-direction: column;
+	padding: 0 10rpx 5rpx 10rpx; 
+} 
+ 
+ .listImg{
+	 width:230rpx;
+	 height:230rpx;
+ }
 
-.movice-list image {
-    width: 230 rpx;
-    height: 230 rpx;
-}

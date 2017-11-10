@@ -1,7 +1,7 @@
 <import src="../movice-star/movice-star-template.wxml" />
 <template name="movice-list">
         <view class="movice-list">
-            <image src="{{item.image}}"></image>
+            <image class="listImg" src="{{item.image}}"></image>
             <text>{{item.title}}</text>
             <template is='movice-star' data="{{item}}"/>
         </view>
