@@ -9,7 +9,7 @@ function http(url, obj, str, moviceTitle, isRefresh) {
 			"Content-Type": "json"
 		},
 		success: function (msg) {
-			console.log(msg);
+			// console.log(msg);
 			getMovices(msg, str, moviceTitle, obj, isRefresh);
 		}, fail: function () {
 			console.log("无法获取数据");

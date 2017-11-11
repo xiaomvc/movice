@@ -1,12 +1,19 @@
 @import "../movice-list/movice-list-template.wxss";
 
-.more-container{
-	/* float: left; */
-	width:100%;
-	height: 1300rpx;
-
+.more-container {
+    /* float: left; */
+    width: 100%;
+    height: 1300rpx;
 }
-.more-movice{
-	/* width: 240rpx; */
-	float:left;
+
+.more-movice {
+    /* width: 240rpx; */
+    float: left;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    border: 1rpx solid #eee;
+    margin-bottom: 5rpx;
 }

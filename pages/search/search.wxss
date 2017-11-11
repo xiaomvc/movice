@@ -1,0 +1,10 @@
+.search {
+    display: flex;
+    flex-direction: row;
+	/* flex-flow:  */
+}
+.clearSearch{
+	width:30rpx;
+	height: 30rpx;
+	margin-left: 220rpx;
+}

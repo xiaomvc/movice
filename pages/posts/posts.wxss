@@ -1,4 +1,5 @@
 @import "post-item/post-item-template.wxss";
+@import "../search/search.wxss";
 
 .post-container {
    width: 100%;

@@ -17,6 +17,12 @@ Page({
 	 */
 	onLoad: function (options) {
 		var category = options.category;
+		if (category == "undefined" || category == "null") {
+			wx.showToast({
+				title: '无法查询数据',
+			});
+			return false;
+		}
 		this.data.category = category;
 		switch (category) {
 			case "正在热映":
@@ -46,15 +52,19 @@ Page({
 	 */
 	onPullDownRefresh: function () {
 		wx.startPullDownRefresh(
+			//在导航栏中显示加载动画
+			wx.showNavigationBarLoading(),
 			//重新加载数据
 			this.data.total = 0,
 			this.data.moreMovice = {},
-			util.http(this.data.url, this, "moreMovice")
-
+			wx.stopPullDownRefresh(),
+			wx.hideNavigationBarLoading(),
+			util.http(this.data.url, this, "moreMovice"),
 		)
 	},
+
 	//上拉更新更多
-	loadMore: function () {
+	onReachBottom: function () {
 
 		this.data.total += 20;//每次添加的数量
 		//在导航栏中显示加载动画

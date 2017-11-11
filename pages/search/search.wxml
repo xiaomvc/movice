@@ -1,0 +1,7 @@
+<template name="search">
+    <view class="search">
+        <icon type="search"></icon>
+        <input placeholder='搜索电影'></input>
+        <image src="/images/icon/xx.png" class="clearSearch"></image>
+    </view>
+</template>

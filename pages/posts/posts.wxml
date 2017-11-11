@@ -1,4 +1,8 @@
 <import src="post-item/post-item-template.wxml" />
+<import src="../search/search.wxml"/>
+
+<template is="search" />
+
 <view>
    <swiper autoplay='true' interval='2000' indicator-dots='true' class='post-container'>
       <swiper-item>

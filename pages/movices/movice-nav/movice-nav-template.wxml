@@ -1,19 +1,20 @@
 <import src="../movice-list/movice-list-template.wxml" />
 <template name="movice-nav">
     <view class='list-container'>
-        <view class='movice-nav'>
-            <text>{{moviceTitle}}</text>
-            <view class="moreMovice" data-category="{{moviceTitle}}" catchtap="moreMovice">
-                <text>更多</text>
-                <image class="mving" src="/images/icon/arrow-right.png" />
+        <view class="inner-container">
+            <view class='movice-nav'>
+                <text>{{moviceTitle}}</text>
+                <view class="moreMovice" data-category="{{moviceTitle}}" catchtap="moreMovice">
+                    <text>更多</text>
+                    <image class="mving" src="/images/icon/arrow-right.png" />
+                </view>
+            </view>
+
+            <view class='movice-container'>
+                <block wx:for="{{movices}}">
+                    <template is="movice-list" data="{{item}}" />
+                </block>
             </view>
         </view>
-
-        <view class='movice-container'>
-            <block wx:for="{{movices}}">
-                <template is="movice-list" data="{{item}}" />
-            </block>
-        </view>
     </view>
-
 </template>
