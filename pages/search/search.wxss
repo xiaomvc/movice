@@ -1,10 +1,30 @@
 .search {
     display: flex;
     flex-direction: row;
-	/* flex-flow:  */
+    /* justify-content: space-around; */
+    margin-bottom: 15rpx;
+    /* align-items: center; */
+    background-color: #eee;
+    height: 60rpx;
 }
-.clearSearch{
-	width:30rpx;
-	height: 30rpx;
-	margin-left: 220rpx;
+
+.searchImg {
+    margin: auto 0 auto 20rpx;
+}
+
+.placeholder {
+    font-size: 28rpx;
+    margin-left: 30rpx;
+}
+.search input{
+	padding-left: 20rpx;
+	margin:auto auto auto 20rpx;
+	width: 600rpx;
+}
+
+.clearSearch {
+    width: 30rpx;
+    height: 30rpx;
+     align-self: center; 
+	padding: 10rpx 30rpx 10rpx 10rpx;
 }

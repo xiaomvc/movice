@@ -1,4 +1,6 @@
 <import src="../movice-list/movice-list-template.wxml" />
+
+
 <template name="movice-nav">
     <view class='list-container'>
         <view class="inner-container">

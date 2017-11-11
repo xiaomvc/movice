@@ -9,7 +9,11 @@ Page({
 		moreMovice: {},
 		total: 0,
 		url: {},
-		isRefresh: true
+		nowUrl: {},//把当前的地址保存下来（搜索后返回的依据）
+		isRefresh: true,//是否更新
+		isSearchShow: false,//是否搜索
+		searchTitle: "搜索类型",
+		search: ""//搜索时要带的参数
 	},
 
 	/**
@@ -36,6 +40,7 @@ Page({
 
 		}
 		this.data.url = url;//获取当前访问的地址
+		this.data.nowUrl = url;//获取当前访问的地址(搜索后可以返回当前的路径)
 		util.http(url, this, "moreMovice", category);
 	},
 
@@ -56,11 +61,12 @@ Page({
 			wx.showNavigationBarLoading(),
 			//重新加载数据
 			this.data.total = 0,
-			this.data.moreMovice = {},
+			// this.data.moreMovice = {},
 			wx.stopPullDownRefresh(),
-			wx.hideNavigationBarLoading(),
-			util.http(this.data.url, this, "moreMovice"),
+			console.log(333333),
+			util.http(this.data.url + "?" + this.data.search, this, "moreMovice"),
 		)
+		wx.hideNavigationBarLoading()
 	},
 
 	//上拉更新更多
@@ -69,8 +75,48 @@ Page({
 		this.data.total += 20;//每次添加的数量
 		//在导航栏中显示加载动画
 		wx.showNavigationBarLoading(),
-			util.http(this.data.url + "?start=" + this.data.total + "&count=20", this, "moreMovice", '', this.data.isRefresh),
+			util.http(this.data.url + "?start=" + this.data.total + "& count=20 &" + this.data.search, this, "moreMovice", '', this.data.isRefresh),
 			wx.hideNavigationBarLoading()
 
+	},
+	/**
+	 * 搜索
+	 */
+	starSearch: function (event) {
+		var reg = /^\s*$/;
+		if (reg.test(event.detail.value)) {
+			wx.showToast({
+				title: '搜索不能为空',
+			})
+			return false;
+		}
+		//因为这是新的，所以把总数量改为0,还有地址，和数据
+		this.data.total = 0;
+		this.data.url = "/v2/movie/search";//修改链接地址
+		this.data.search = "tag= " + event.detail.value;
+		util.http(this.data.url + "?" + this.data.search, this, "moreMovice");
+	},
+	/**
+	 * 点击搜索框的*后，可以返回原来的链接数据
+	 */
+	clearSearch: function () {
+		this.setData({
+			isSearchShow: false
+		});
+
+		this.data.url = this.data.nowUrl;
+		this.data.total = 0;
+		this.data.search = "";
+		//重新查询
+		util.http(this.data.url, this, "moreMovice");
+	},
+	/**
+	 * 搜索框获得焦点时
+	 */
+	onBindFocus: function () {
+		this.setData({
+			isSearchShow: true
+		})
+		console.log(this.data.isSearchShow);
 	}
 })

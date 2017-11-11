@@ -10,6 +10,13 @@ function http(url, obj, str, moviceTitle, isRefresh) {
 		},
 		success: function (msg) {
 			// console.log(msg);
+			if (msg.data.total == 0) {
+				wx.showToast({
+					title: '没有该数据',
+				})
+
+				return false;
+			}
 			getMovices(msg, str, moviceTitle, obj, isRefresh);
 		}, fail: function () {
 			console.log("无法获取数据");

@@ -2,10 +2,10 @@
 <!-- <scroll-view class="more-container" scroll-y="true" scroll-x="false" bindscrolltolower="loadMore" lower-threshold="25rpx"> -->
 <!-- <movable-area>
     <movable-view class="more-container" y="1300rpx" x="400rpx"> -->
-<view class="search">
-    <input placeholder='搜索电影'></input>
-    <text>123</text>
-</view>
+<import src="../../search/search.wxml"/>
+
+<template is="search" data="{{searchTitle,isSearchShow}}"/>
+
 <view class="more-container">
     <block wx:for="{{moreMovice.movices}}">
         <view class="more-movice">
