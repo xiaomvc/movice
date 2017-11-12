@@ -30,7 +30,7 @@ Page({
 	},
 	onReady:function(){
 		wx.setNavigationBarTitle({
-			title: 'demodemo',
+			title: '久违的音乐',
 		})
 	}
 })
