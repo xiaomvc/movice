@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 <text>{{news.id}}</text>
+=======
+<text>{{news.id}}</text>
+>>>>>>> def85aab052ca1e5da895b261595a25d14d881ab
 <image src='/images/icon/share.png' catchtap="shareItem"></image>
