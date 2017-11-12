@@ -1,5 +1,6 @@
 {
 	"pages": [
+		"pages/movices/movice-detail/movice-detail",
 		"pages/posts/posts",
 		"pages/movices/movices",
 		"pages/movices/movice-more/movice-more",

@@ -1,0 +1,36 @@
+.detail-top {
+	position: relative;
+}
+
+.topImg1 {
+    width: 100%;
+	height: 350rpx;
+	 -webkit-filter:blur(6px);
+}
+.topImg2{
+	width: 250rpx;
+	height: 250rpx;
+	position: absolute;
+	bottom: 10rpx;
+	right: 20rpx;
+
+}
+
+
+.castList {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.castimg {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.castList image {
+    width: 250rpx;
+    height: 200rpx;
+    margin: 25rpx;
+}

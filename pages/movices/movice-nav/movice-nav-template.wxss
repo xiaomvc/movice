@@ -18,6 +18,7 @@
      position: relative; 
     align-items: center;
 	width: 700rpx; */
+	margin-bottom: 10rpx;
 }
 
 .movice-nav text:nth-child(1) {

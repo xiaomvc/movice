@@ -1,0 +1,42 @@
+<view class='detail-top'>
+    <image class='topImg1' mode='center' src='/images/post/sls.JPG'></image>
+    <image class='topImg2' src='/images/post/sls.JPG'></image>
+    <text>大话西游</text>
+    <text>1231</text>
+    <view>
+        <text>12312  人喜欢</text>
+        <text>22222  人评论</text>
+    </view>
+</view>
+<view>
+    <text>12阿斯蒂芬</text>
+    <text>评分  12312</text>
+    <text>导演  12312</text>
+    <text>影人  3454 </text>
+    <text>类型  34534</text>
+</view>
+<view>
+    <text>剧情简介</text>
+    <text>是的法师打发打发打发时光到底发生的防守打法</text>
+</view>
+
+<view class='cast'>
+    <text>影人</text>
+    <scroll-view scroll-x="true" class='castList'>
+        <view class='castimg'>
+            <image src='/images/post/sls.JPG'></image>
+            <text>1232123</text>
+        </view>
+
+        <view class='castimg'>
+            <image src='/images/post/bl.png'></image>
+            <text>1232123</text>
+        </view>
+
+        <view class='castimg'>
+            <image src='/images/post/vr.png'></image>
+            <text>1232123</text>
+        </view>
+
+    </scroll-view>
+</view>
