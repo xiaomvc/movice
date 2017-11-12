@@ -1,3 +1,5 @@
+@import "../movice-star/movice-star-template.wxss";
+
 .detail-top {
     position: relative;
 }
@@ -5,7 +7,7 @@
 .topImg1 {
     width: 100%;
     height: 350rpx;
-    -webkit-filter: blur(6px);
+    -webkit-filter: blur(20px);
 }
 
 .topImg2 {
@@ -31,6 +33,7 @@
 .topTitle {
     color: #fff;
     font-size: 30rpx;
+    font-weight: bolder;
 }
 
 .topLike text {
@@ -41,50 +44,63 @@
     color: red;
 }
 
+.topLike text:nth-child(2), .topLike text:nth-child(4) {
+    /* color: #666; */
+    font-weight: bolder;
+}
+
 .detailContainer {
     display: flex;
     flex-direction: column;
     margin-top: 30rpx;
 }
 
-.detailContainer view {
-    margin-left: 30rpx;
-}
-
 .container-title {
     margin-bottom: 20rpx;
+    margin-left: 30rpx;
 }
 
 .container-title text {
     font-size: 30rpx;
 }
 
-.container-row text:nth-child(1){
-	color: #666;
-	margin-right: 10rpx;
+.container-row {
+    display: flex;
+    flex-direction: row;
+    padding: 8rpx;
+    text-align: center;
+    margin-left: 30rpx;
 }
 
-.introduce{
-	display: flex;
-	flex-direction: column;
-	margin: 30rpx auto 30rpx 30rpx;
+.container-row text:nth-child(1) {
+    color: #666;
+    margin-right: 20rpx;
 }
-.introduce text:nth-child(1){
-	font-size: 28rpx;
-	color: #666;
+
+.introduce {
+    display: flex;
+    flex-direction: column;
+    margin: 30rpx auto 30rpx 30rpx;
 }
-.introduce text:nth-child(2){
-	font-size: 24rpx;
+
+.introduce text:nth-child(1) {
+    font-size: 28rpx;
+    color: #666;
+}
+
+.introduce text:nth-child(2) {
+    font-size: 24rpx;
 }
 
 .cast {
-	/* overflow: hidden */
+    /* overflow: hidden */
 }
 
-.castTitle{
-	margin-left: 30rpx;
-	font-size: 26rpx;
+.castTitle {
+    margin-left: 30rpx;
+    font-size: 26rpx;
 }
+
 .castList {
     display: flex;
     flex-direction: row;
@@ -100,5 +116,5 @@
 .castList image {
     width: 250rpx;
     height: 200rpx;
-    margin: 25rpx;
+    margin: 10rpx;
 }

@@ -1,13 +1,15 @@
+<import src="../movice-star/movice-star-template.wxml" />
+
 <view class='detail-top'>
-    <image class='topImg1' mode='center' src='/images/post/sls.JPG'></image>
-    <image class='topImg2' mode='scaleToFill' src='/images/post/sls.JPG'></image>
+    <image class='topImg1' mode='aspectFill' src='{{detailData.image}}'></image>
+    <image class='topImg2' mode='scaleToFill' src='{{detailData.image}}' data-url='{{detailData.image}}' catchtap='previewImage'></image>
     <view class='top'>
-        <text class='topTitle'>大话西游</text>
-        <text class='topTitle'>1231</text>
+        <text class='topTitle'>{{detailData.title}}</text>
+        <text class='topTitle'>{{detailData.countrices}}</text>
         <view class='topLike'>
-            <text>123</text>
+            <text>{{detailData.ratings_count}}</text>
             <text>人喜欢</text>
-            <text>123</text>
+            <text>{{detailData.reviews_count}}</text>
             <text>人评论</text>
         </view>
     </view>
@@ -15,50 +17,48 @@
 
 <view class='detailContainer'>
     <view class='container-title'>
-        <text>阿斯蒂芬</text>
+        <text>{{detailData.title}}</text>
     </view>
     <view class='container-row'>
         <text>评分  </text>
-        <text>222</text>
+        <template is="movice-star" data="{{...detailData}}" />
     </view>
     <view class='container-row'>
         <text>导演  </text>
-        <text>12312</text>
+        <block wx:for="{{detailData.nameArr}}">
+            <text>{{item.name}}</text>
+        </block>
     </view>
     <view class='container-row'>
         <text>影人   </text>
-        <text>3454</text>
+        <text>{{detailData.castsName}}</text>
+        <!-- <block wx:for="{{detailData.castsArr}}">
+            <text>{{item.name}}</text>
+        </block> -->
     </view>
     <view class='container-row'>
         <text>类型  </text>
-        <text>122312</text>
+        <text> {{detailData.genresArr}} </text>
+        <!-- <block wx:for="{{detailData.genresArr}}">
+            <text> {{item}} </text>
+        </block> -->
     </view>
 </view>
 
 <view class='introduce'>
     <text>剧情简介</text>
-    <text>
-        是的法师打发打发打发时光到底发生的防守打法是的法师打发打发打发时光到底发生的防守打法是的法师打发打发打发时光到底发生的防守打法是的法师打发打发打发时光到底发生的防守打法是的法师打发打发打发时光到底发生的防守打法是的法师打发打发打发时光到底发生的防守打法是的法师打发打发打发时光到底发生的防守打法是的法师打发打发打发时光到底发生的防守打法是的法师打发打发打发时光到底发生的防守打法
-    </text>
+    <text>{{detailData.summary}}</text>
 </view>
 <view class='cast'>
 
     <text class='castTitle'>影人</text>
     <scroll-view scroll-x="true" class='castList'>
-        <view class='castimg'>
-            <image src='/images/post/sls.JPG'></image>
-            <text>1232123</text>
-        </view>
-
-        <view class='castimg'>
-            <image src='/images/post/bl.png'></image>
-            <text>1232123</text>
-        </view>
-
-        <view class='castimg'>
-            <image src='/images/post/vr.png'></image>
-            <text>1232123</text>
-        </view>
+        <block wx:for="{{detailData.castsArr}}">
+            <view class='castimg'>
+                <image src='{{item.avatars.large}}'></image>
+                <text>{{item.name}}</text>
+            </view>
+        </block>
 
     </scroll-view>
 </view>

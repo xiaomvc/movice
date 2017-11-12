@@ -1,11 +1,11 @@
 <template name='movice-star'>
     <view class="movice-star">
         <view class='movice-xing'>
-            <block wx:for="{{item.starArr}}">
+            <block wx:for="{{starArr}}">
                 <image class="starImg" wx:if="{{item}}" src="/images/icon/star.png"></image>
-                <image  class="starImg" wx:else src="/images/icon/none-star.png"></image>
+                <image class="starImg" wx:else src="/images/icon/none-star.png"></image>
             </block>
         </view>
-        <text>{{item.rating}}</text>
+        <text>{{average}}</text>
     </view>
 </template>

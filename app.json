@@ -1,8 +1,8 @@
 {
 	"pages": [
-		"pages/movices/movice-detail/movice-detail",
 		"pages/posts/posts",
 		"pages/movices/movices",
+		"pages/movices/movice-detail/movice-detail",
 		"pages/movices/movice-more/movice-more",
 		"pages/posts/post-detail/post-detail",
 		"pages/index/index",
@@ -11,7 +11,7 @@
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "demo",
+		"navigationBarTitleText": "许愿屏",
 		"navigationBarTextStyle": "black"
 	},
 	"tabBar": {

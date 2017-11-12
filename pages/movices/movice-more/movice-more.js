@@ -117,6 +117,15 @@ Page({
 		this.setData({
 			isSearchShow: true
 		})
-		console.log(this.data.isSearchShow);
+		// console.log(this.data.isSearchShow);
+	}
+	/**
+	 * 跳转到详细页面
+	 */
+	, getDetail: function (event) {
+
+		// console.log(event);
+		var id = event.currentTarget.dataset.id;
+		util.toDetail("../movice-detail/movice-detail?id=" + id);
 	}
 })

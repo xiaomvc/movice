@@ -23,8 +23,6 @@ function http(url, obj, str, moviceTitle, isRefresh) {
 		}
 	})
 }
-
-
 /**
  * 对获取的数据进行处理
  */
@@ -36,7 +34,7 @@ function getMovices(msg, str, moviceTitle, obj, isRefresh) {
 			id: msg.data.subjects[index].id,
 			title: msg.data.subjects[index].title.substring(0, 8),
 			image: msg.data.subjects[index].images.large,
-			rating: msg.data.subjects[index].rating.average,
+			average: msg.data.subjects[index].rating.average,
 			star: msg.data.subjects[index].rating.stars,
 			starArr: toStarArray(msg.data.subjects[index].rating.stars)
 		}
@@ -73,7 +71,63 @@ function toStarArray(star) {
 	return arr;
 }
 
+/**
+ * 跳转到详细子页面
+ */
+function toDetail(url) {
+	wx.navigateTo({
+		url: url,
+	})
+}
+/**
+ * 获取电影详细信息
+ */
+function getMoviceData(id, obj) {
+	wx.request({
+		url: app.globalData.douBanUrl + "/v2/movie/subject/" + id,
+		header: {
+			"Content-Type": 'json'
+		},
+		success: function (msg) {
+			// console.log(msg);
+
+			var casts='';//影人名称信息
+			for (var ind in msg.data.casts){
+				casts += msg.data.casts[ind].name+"/";
+			}
+			var genres='';//类型信息
+			for (var ind in msg.data.genres){
+				genres += msg.data.genres[ind]+" 、"
+			}
+
+			var data = {
+				title: msg.data.title,//标题
+				countrices: msg.data.countries + "." + msg.data.year,//地区和年份
+				ratings_count: msg.data.ratings_count,//喜欢人数
+				reviews_count: msg.data.reviews_count,//评论人数
+				image: msg.data.images.large,//海报
+				average: msg.data.rating.average,//得分
+				starArr: toStarArray(msg.data.rating.stars),//评分
+				nameArr: msg.data.directors,//导演
+				castsName: casts.substring(0, casts.length-1),//影人名称信息
+				castsArr: msg.data.casts,//影人图片信息
+				genresArr: genres.substring(0, genres.length - 1),//电影类型
+				summary: msg.data.summary,//简介
+			};
+
+			obj.setData({
+				detailData:data
+			})
+		}
+	})
+}
+
+/**
+ * 传递出去
+ */
 module.exports = {
 	http: http,
-	toStarArray: toStarArray
+	toStarArray: toStarArray,
+	toDetail: toDetail,
+	getMoviceData: getMoviceData
 }
