@@ -23,10 +23,10 @@
 				"selectedIconPath": "images/tab/yuedu_hl.png"
 			},
 			{
-				"pagePath":"pages/movices/movices",
-				"text":"电影",
-				"iconPath":"images/tab/dianying.png",
-				"selectedIconPath":"images/tab/dianying_hl.png"
+				"pagePath": "pages/movices/movices",
+				"text": "电影",
+				"iconPath": "images/tab/dianying.png",
+				"selectedIconPath": "images/tab/dianying_hl.png"
 			}
 		]
 	}

@@ -85,6 +85,7 @@ function toDetail(url) {
 function getMoviceData(id, obj) {
 	wx.request({
 		url: app.globalData.douBanUrl + "/v2/movie/subject/" + id,
+		dataType:'json',
 		header: {
 			"Content-Type": 'json'
 		},

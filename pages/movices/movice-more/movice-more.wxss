@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import "../movice-list/movice-list-template.wxss";
 @import "../../search/search.wxss";
 
@@ -12,20 +11,3 @@
     /* width: 240rpx; */
     float: left;
 }
-
-=======
-@import "../movice-list/movice-list-template.wxss";
-@import "../../search/search.wxss";
-
-.more-container {
-    /* float: left; */
-    width: 100%;
-    height: 1300rpx;
-}
-
-.more-movice {
-    /* width: 240rpx; */
-    float: left;
-}
-
->>>>>>> def85aab052ca1e5da895b261595a25d14d881ab

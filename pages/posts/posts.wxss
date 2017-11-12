@@ -1,44 +1,21 @@
-<<<<<<< HEAD
 @import "post-item/post-item-template.wxss";
 @import "../search/search.wxss";
 
 .post-container {
-   width: 100%;
-   height: 500rpx;
+    width: 100%;
+    height: 500rpx;
 }
 
 .post-container image {
-   width: 100%;
-   height: 500rpx;
+    width: 100%;
+    height: 500rpx;
 }
 
 .post-news {
-   /* border: 1px solid red; */
-   margin: 20rpx 0 20rpx 0;
-   padding: 6px;
-   display: flex;
-   flex-direction: column;
-   border-bottom: 1px solid #eee;
-=======
-@import "post-item/post-item-template.wxss";
-@import "../search/search.wxss";
-
-.post-container {
-   width: 100%;
-   height: 500rpx;
-}
-
-.post-container image {
-   width: 100%;
-   height: 500rpx;
-}
-
-.post-news {
-   /* border: 1px solid red; */
-   margin: 20rpx 0 20rpx 0;
-   padding: 6px;
-   display: flex;
-   flex-direction: column;
-   border-bottom: 1px solid #eee;
->>>>>>> def85aab052ca1e5da895b261595a25d14d881ab
+    /* border: 1px solid red; */
+    margin: 20rpx 0 20rpx 0;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #eee;
 }
