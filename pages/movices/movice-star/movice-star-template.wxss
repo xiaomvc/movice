@@ -1,0 +1,20 @@
+.movice-star {
+    display: flex;
+    flex-direction: row;
+    margin: 15rpx 0;
+}
+
+.movice-star text {
+    margin-left: 5rpx;
+    line-height: 20rpx;
+}
+
+.movice-xing {
+    display: flex;
+    flex-direction: row;
+}
+
+.starImg {
+    width: 20rpx;
+    height: 20rpx;
+}

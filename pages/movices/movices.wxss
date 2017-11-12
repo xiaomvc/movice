@@ -1,0 +1,5 @@
+ @import "movice-nav/movice-nav-template.wxss"; 
+.movices{
+	background-color: #eee;
+	
+}

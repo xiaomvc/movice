@@ -1,0 +1,45 @@
+.post-author {
+   display: flex;
+   flex-direction: row;
+}
+
+.post-author image {
+   width: 30px;
+   height: 30px;
+   vertical-align: middle;
+}
+
+.post-author text {
+   margin: 0 6px 0 5px;
+   line-height: 30px;
+}
+
+.post-news-title {
+   padding: 6px;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.post-news-logo {
+   width: 100%;
+}
+
+.post-news-introduce {
+   padding: 5px;
+}
+
+.post-like {
+   display: flex;
+   flex-direction: row;
+}
+
+.post-like image {
+   width: 30px;
+   height: 30px;
+   vertical-align: middle;
+}
+
+.post-like text {
+   padding: 0 6px 0 6px;
+   line-height: 30px;
+}

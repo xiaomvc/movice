@@ -1,0 +1,15 @@
+<template name='newslist-template'>
+   <view class='post-author'>
+      <image class='asd' src='{{avatar}}'></image>
+      <text>{{date}}+{{index}}</text>
+   </view>
+   <text class='post-news-title'>{{title}}</text>
+   <image class='post-news-logo' src='{{imgSrc}}'></image>
+   <text class='post-news-introduce'>{{content}}</text>
+   <view class='post-like'>
+      <image src='/images/icon/chat1.png'></image>
+      <text>{{reading}}</text>
+      <image src='/images/icon/view.png'></image>
+      <text>{{collection}}</text>
+   </view>
+</template>

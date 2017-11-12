@@ -1,0 +1,18 @@
+<import src="../movice-list/movice-list-template.wxml" />
+<!-- <scroll-view class="more-container" scroll-y="true" scroll-x="false" bindscrolltolower="loadMore" lower-threshold="25rpx"> -->
+<!-- <movable-area>
+    <movable-view class="more-container" y="1300rpx" x="400rpx"> -->
+<import src="../../search/search.wxml"/>
+
+<template is="search" data="{{searchTitle,isSearchShow}}"/>
+
+<view class="more-container">
+    <block wx:for="{{moreMovice.movices}}">
+        <view class="more-movice">
+            <template is="movice-list" data="{{item}}" />
+        </view>
+    </block>
+</view>
+<!-- </movable-view>
+</movable-area> -->
+<!-- </scroll-view> -->
