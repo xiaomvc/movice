@@ -4,6 +4,7 @@ var app = getApp();
  * 获取电影的请求
  */
 function http(url, obj, str, moviceTitle, isRefresh) {
+	console.log(app.globalData.douBanUrl + url);
 	wx.request({
 		url: app.globalData.douBanUrl + url,
 		method: 'GET',
@@ -15,7 +16,7 @@ function http(url, obj, str, moviceTitle, isRefresh) {
 			// console.log(msg);
 			if (msg.data.total == 0) {
 				wx.showToast({
-					title: '没有该数据',
+					title: '没找到该数据',
 				})
 
 				return false;
@@ -52,12 +53,14 @@ function getMovices(msg, str, moviceTitle, obj, isRefresh) {
 	//前数据和后数据进行合并
 	if (isRefresh) {
 		var moreMovice = obj.data.moreMovice.movices;
+
+		// console.log(readyData[str].movices);
 		readyData[str].movices = moreMovice.concat(readyData[str].movices);
 
 	}
-	console.log(readyData),
-		//为其绑定数据
-		obj.setData(readyData);
+	// console.log(readyData),
+	//为其绑定数据
+	obj.setData(readyData);
 }
 /**
  * 判断评分

@@ -94,7 +94,10 @@
 
 .cast {
     /* overflow: hidden */
-	width: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .castTitle {
@@ -102,20 +105,25 @@
     font-size: 26rpx;
 }
 
-.castList {
+/* .castList {
     display: flex;
     flex-direction: row;
     white-space: nowrap;
-}
+} */
 
 .castimg {
+    /* display: inline-flex;
+    flex-direction: column; *//* align-items: center; */
+    width: 230rpx;
+    height: 279rpx;
+    margin-right: 23rpx;
+    display: inline-block;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
 }
 
 .castList image {
-    width: 250rpx;
-    height: 200rpx;
-    margin: 10rpx;
+    width: 230rpx;
+    height: 250rpx;
 }

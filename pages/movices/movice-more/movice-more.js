@@ -12,7 +12,7 @@ Page({
 		nowUrl: {},//把当前的地址保存下来（搜索后返回的依据）
 		isRefresh: true,//是否更新
 		isSearchShow: false,//是否搜索
-		searchTitle: "搜索类型",
+		searchTitle: "你的名字",
 		search: ""//搜索时要带的参数
 	},
 
@@ -57,25 +57,22 @@ Page({
 	 */
 	onPullDownRefresh: function () {
 		wx.startPullDownRefresh(
-			console.log(1),
 			//在导航栏中显示加载动画
 			wx.showNavigationBarLoading(),
 			//重新加载数据
 			this.data.total = 0,
-			// this.data.moreMovice = {},
+			util.http(this.data.url + "?" + this.data.search.substring(1), this, "moreMovice"),
 			wx.stopPullDownRefresh(),
-			util.http(this.data.url + "?" + this.data.search, this, "moreMovice"),
+			wx.hideNavigationBarLoading()
 		)
-		wx.hideNavigationBarLoading()
 	},
 
 	//上拉更新更多
 	onReachBottom: function () {
-		console.log(2),
-			this.data.total += 20;//每次添加的数量
+		this.data.total += 20;//每次添加的数量
 		//在导航栏中显示加载动画
 		wx.showNavigationBarLoading(),
-			util.http(this.data.url + "?start=" + this.data.total + "& count=20 &" + this.data.search, this, "moreMovice", '', this.data.isRefresh),
+			util.http(this.data.url + "?start=" + this.data.total + "&count=20" + this.data.search, this, "moreMovice", '', this.data.isRefresh),
 			wx.hideNavigationBarLoading()
 
 	},
@@ -93,8 +90,8 @@ Page({
 		//因为这是新的，所以把总数量改为0,还有地址，和数据
 		this.data.total = 0;
 		this.data.url = "/v2/movie/search";//修改链接地址
-		this.data.search = "tag= " + event.detail.value;
-		util.http(this.data.url + "?" + this.data.search, this, "moreMovice");
+		this.data.search = "&q=" + event.detail.value;//搜索的参数
+		util.http(this.data.url + "?start=0&count=20&q=" + event.detail.value, this, "moreMovice");
 	},
 	/**
 	 * 点击搜索框的*后，可以返回原来的链接数据
