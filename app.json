@@ -1,5 +1,6 @@
 {
 	"pages": [
+		"pages/job/job",
 		"pages/movices/movices",
 		"pages/posts/posts",
 		"pages/music/music",
@@ -18,8 +19,8 @@
 	"tabBar": {
 		"list": [
 			{
-				"pagePath": "pages/posts/posts",
-				"text": "阅读",
+				"pagePath": "pages/job/job",
+				"text": "简历",
 				"iconPath": "images/tab/yuedu.png",
 				"selectedIconPath": "images/tab/yuedu_hl.png"
 			},
