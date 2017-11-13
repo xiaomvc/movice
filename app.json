@@ -1,7 +1,8 @@
 {
 	"pages": [
-		"pages/posts/posts",
 		"pages/movices/movices",
+		"pages/posts/posts",
+		"pages/music/music",
 		"pages/movices/movice-detail/movice-detail",
 		"pages/movices/movice-more/movice-more",
 		"pages/posts/post-detail/post-detail",

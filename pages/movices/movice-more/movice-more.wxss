@@ -8,6 +8,8 @@
 }
 
 .more-movice {
-    /* width: 240rpx; */
+    width: 230rpx;
+    /* height: 300rpx; */
     float: left;
+    padding: 0 10rpx;
 }

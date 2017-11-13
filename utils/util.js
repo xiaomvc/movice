@@ -1,5 +1,8 @@
 var app = getApp();
 
+/**
+ * 获取电影的请求
+ */
 function http(url, obj, str, moviceTitle, isRefresh) {
 	wx.request({
 		url: app.globalData.douBanUrl + url,
@@ -32,7 +35,7 @@ function getMovices(msg, str, moviceTitle, obj, isRefresh) {
 	for (var index in msg.data.subjects) {
 		var temp = {
 			id: msg.data.subjects[index].id,
-			title: msg.data.subjects[index].title.substring(0, 8),
+			title: msg.data.subjects[index].title.substring(0, 7),
 			image: msg.data.subjects[index].images.large,
 			average: msg.data.subjects[index].rating.average,
 			star: msg.data.subjects[index].rating.stars,
@@ -52,8 +55,9 @@ function getMovices(msg, str, moviceTitle, obj, isRefresh) {
 		readyData[str].movices = moreMovice.concat(readyData[str].movices);
 
 	}
-	//为其绑定数据
-	obj.setData(readyData);
+	console.log(readyData),
+		//为其绑定数据
+		obj.setData(readyData);
 }
 /**
  * 判断评分
@@ -85,20 +89,20 @@ function toDetail(url) {
 function getMoviceData(id, obj) {
 	wx.request({
 		url: app.globalData.douBanUrl + "/v2/movie/subject/" + id,
-		dataType:'json',
+		dataType: 'json',
 		header: {
 			"Content-Type": 'json'
 		},
 		success: function (msg) {
 			// console.log(msg);
 
-			var casts='';//影人名称信息
-			for (var ind in msg.data.casts){
-				casts += msg.data.casts[ind].name+"/";
+			var casts = '';//影人名称信息
+			for (var ind in msg.data.casts) {
+				casts += msg.data.casts[ind].name + "/";
 			}
-			var genres='';//类型信息
-			for (var ind in msg.data.genres){
-				genres += msg.data.genres[ind]+" 、"
+			var genres = '';//类型信息
+			for (var ind in msg.data.genres) {
+				genres += msg.data.genres[ind] + " 、"
 			}
 
 			var data = {
@@ -110,15 +114,27 @@ function getMoviceData(id, obj) {
 				average: msg.data.rating.average,//得分
 				starArr: toStarArray(msg.data.rating.stars),//评分
 				nameArr: msg.data.directors,//导演
-				castsName: casts.substring(0, casts.length-1),//影人名称信息
+				castsName: casts.substring(0, casts.length - 1),//影人名称信息
 				castsArr: msg.data.casts,//影人图片信息
 				genresArr: genres.substring(0, genres.length - 1),//电影类型
 				summary: msg.data.summary,//简介
 			};
 
 			obj.setData({
-				detailData:data
+				detailData: data
 			})
+		}
+	})
+}
+function getMusicHttp(url, obj) {
+	wx.request({
+		url: app.globalData.douBanUrl + url,
+		dataType: 'json',
+		header: {
+			"Content-Type": "json"
+		},
+		success: function (msg) {
+			console.log(msg);
 		}
 	})
 }
@@ -130,5 +146,6 @@ module.exports = {
 	http: http,
 	toStarArray: toStarArray,
 	toDetail: toDetail,
-	getMoviceData: getMoviceData
+	getMoviceData: getMoviceData,
+	getMusicHttp: getMusicHttp
 }

@@ -57,13 +57,13 @@ Page({
 	 */
 	onPullDownRefresh: function () {
 		wx.startPullDownRefresh(
+			console.log(1),
 			//在导航栏中显示加载动画
 			wx.showNavigationBarLoading(),
 			//重新加载数据
 			this.data.total = 0,
 			// this.data.moreMovice = {},
 			wx.stopPullDownRefresh(),
-			console.log(333333),
 			util.http(this.data.url + "?" + this.data.search, this, "moreMovice"),
 		)
 		wx.hideNavigationBarLoading()
@@ -71,8 +71,8 @@ Page({
 
 	//上拉更新更多
 	onReachBottom: function () {
-
-		this.data.total += 20;//每次添加的数量
+		console.log(2),
+			this.data.total += 20;//每次添加的数量
 		//在导航栏中显示加载动画
 		wx.showNavigationBarLoading(),
 			util.http(this.data.url + "?start=" + this.data.total + "& count=20 &" + this.data.search, this, "moreMovice", '', this.data.isRefresh),

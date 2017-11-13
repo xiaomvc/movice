@@ -2,8 +2,8 @@
 
 .list-container {
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     margin-bottom: 20rpx;
 }
 
@@ -18,16 +18,19 @@
      position: relative; 
     align-items: center;
 	width: 700rpx; */
-	margin-bottom: 10rpx;
+    margin: 20rpx auto;
+    font-size: 28rpx;
 }
 
 .movice-nav text:nth-child(1) {
     margin: 10rpx;
+    vertical-align: middle;
 }
 
 .moreMovice text:nth-child(1) {
     color: blue;
-    /* line-height: 30rpx; *//* text-align: center */
+    line-height: 30rpx;
+    vertical-align: middle;
 }
 
 .mving {

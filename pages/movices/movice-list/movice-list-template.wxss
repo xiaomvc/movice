@@ -10,7 +10,8 @@
 } 
  
  .listImg{
-	 width:230rpx;
-	 height:230rpx;
+	 width:220rpx;
+	 height:270rpx;
+	 padding: 0 3rpx;
  }
 

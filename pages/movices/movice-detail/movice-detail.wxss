@@ -94,6 +94,7 @@
 
 .cast {
     /* overflow: hidden */
+	width: 100%;
 }
 
 .castTitle {
