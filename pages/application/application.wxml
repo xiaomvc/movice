@@ -1,0 +1,6 @@
+<view class="app">
+    <view class="appContainer">
+        <navigator open-type="redirect" url="/pages/application/books/books" hover-class="navigator-hover">书客</navigator>
+    </view>
+
+</view>

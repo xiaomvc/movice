@@ -1,23 +1,31 @@
 {
 	"pages": [
+		"pages/application/application",
+		"pages/application/books/books",
+		"pages/application/books/shopCart/shopCart",
 		"pages/job/job",
-		"pages/movices/movices",
 		"pages/posts/posts",
-		"pages/music/music",
+		"pages/logs/logs",
+		"pages/movices/movices",
 		"pages/movices/movice-detail/movice-detail",
 		"pages/movices/movice-more/movice-more",
 		"pages/posts/post-detail/post-detail",
-		"pages/index/index",
-		"pages/logs/logs"
+		"pages/index/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "许愿屏",
+		"navigationBarTitleText": "微应用",
 		"navigationBarTextStyle": "black"
 	},
 	"tabBar": {
 		"list": [
+			{
+				"pagePath": "pages/application/application",
+				"text": "微应用",
+				"iconPath": "images/tab/app1.jpg",
+				"selectedIconPath": "images/tab/app.jpg"
+			},
 			{
 				"pagePath": "pages/job/job",
 				"text": "简历",

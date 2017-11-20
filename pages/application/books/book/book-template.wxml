@@ -1,0 +1,7 @@
+ <template name="book">
+     <view class="book">
+         <image src="/images/avatar/1.png"></image>
+         <text>书名</text>
+         <text>价格</text>
+     </view>
+ </template>

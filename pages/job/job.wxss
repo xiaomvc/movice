@@ -171,13 +171,12 @@ a {
     vertical-align: middle;
 }
 
-.app .ele-container {
+/* .app .ele-container {
     position: relative;
     z-index: 1;
-    /* width: 100%; */
     max-width: 100%;
     clear: both;
-}
+} */
 
 .app .ele-container > .element {
     position: relative;
@@ -836,4 +835,12 @@ a {
 
 .app .breakUp {
     border-top: 1rpx dashed #666;
+}
+
+.app .free-vessel{
+	margin: auto auto;
+}
+
+.app .picture .userLogo{
+	margin-top: 10rpx;
 }

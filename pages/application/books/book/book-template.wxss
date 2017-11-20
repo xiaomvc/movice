@@ -1,0 +1,8 @@
+.book{
+    display: flex;
+    flex-direction: column;
+}
+.book image{
+    width: 300rpx;
+    height: 300rpx;
+}

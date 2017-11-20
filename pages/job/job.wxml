@@ -7,17 +7,17 @@
                 </view>
             </view>
             <view class="ele-container">
-                <view class="element picture" data-event-params="undefined" data-imgarr="http://img.weiye.me/zcimgdir/album/file_59522513aca2a.png" style="opacity:1;background-color:transparent;border-color:rgb(34, 34, 34);border-style:none;height:175px;width:351px;margin-left:auto;margin-right:0;margin-top:0;position:absolute;left:11px;top:52px;">
+                <view class="element picture" data-event-params="undefined" data-imgarr="http://img.weiye.me/zcimgdir/album/file_59522513aca2a.png" style="opacity:1;background-color:transparent;border-color:rgb(34, 34, 34);border-style:none;height:175px;width:100%;margin-left:auto;margin-right:auto;margin-top:0;position:absolute;top:52px;">
                     <image mode="scaleToFill" src="http://img.weiye.me/zcimgdir/album/file_59522513aca2a.png"></image>
                 </view>
             </view>
             <view class="ele-container">
-                <view class="element picture" data-event-params="undefined" data-imgarr="http://img.weiye.me/zcimgdir/album/file_581c3e7714841.gif" style="opacity:1;background-color:transparent;border-color:rgb(34, 34, 34);border-radius:117px;border-style:none;height:69px;width:69px;margin-left:auto;margin-right:0;margin-top:0;position:absolute;left:153px;top:16px;">
-                    <image mode="scaleToFill" src="http://img.weiye.me/zcimgdir/album/file_581c3e7714841.gif"></image>
+                <view class="element picture" data-event-params="undefined" data-imgarr="http://img.weiye.me/zcimgdir/album/file_581c3e7714841.gif" style="opacity:1;background-color:transparent;border-color:rgb(34, 34, 34);border-radius:117px;border-style:none;height:69px;width:69px;margin:0 auto">
+                    <image mode="scaleToFill userLogo" src="http://img.weiye.me/zcimgdir/album/file_581c3e7714841.gif" ></image>
                 </view>
             </view>
             <view class="ele-container">
-                <text class="element text" data-event-params="undefined" style="background-color:rgba(0, 0, 0, 0);border-color:rgb(34, 34, 34);border-style:none;border-width:2px;color:rgb(51, 51, 51);font-size:14px;height:22px;width:331px; margin-left:auto;margin-top:0;opacity:1;text-align:center;position:absolute;left:21px;top:96px;margin-right:0;">
+                <text class="element text" data-event-params="undefined" style="background-color:rgba(0, 0, 0, 0);border-color:rgb(34, 34, 34);border-style:none;border-width:2px;color:rgb(51, 51, 51);font-size:14px;height:22px;width:331px; margin:20rpx auto 0;opacity:1;text-align:center;position:">
                     许咫尺
                 </text>
             </view>
@@ -101,7 +101,7 @@
     <view class="ele-container">
         <view class="element free-vessel" data-event-params="undefined" style="width:375px;height:43px;margin-bottom:auto;margin-right:auto;margin-top:17px;opacity:1;margin-left:auto;">
             <view class="ele-container">
-                <view class="element picture " data-event-params="undefined" data-imgarr="http://img.weiye.me/zcimgdir/album/file_59521ab08766b.png" style="opacity:1;background-color:transparent;border-color:rgb(34, 34, 34);border-style:none;height:35px;width:35px;margin-left:auto;margin-right:0;margin-top:0;position:absolute;left:4px;top:0.5px;">
+                <view class="element picture " data-event-params="undefined" data-imgarr="http://img.weiye.me/zcimgdir/album/file_59521ab08766b.png" style="opacity:1;background-color:transparent;border-color:rgb(34, 34, 34);border-style:none;height:35px;width:35px;margin-left:auto;margin-right:0;margin-top:0;position:absolute;left:4rpx;top:0.5px;">
                     <image mode="scaleToFill" src="http://img.weiye.me/zcimgdir/album/file_59521ab08766b.png"></image>
                 </view>
             </view>

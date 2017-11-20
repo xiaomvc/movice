@@ -1,0 +1,14 @@
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.appContainer {
+    text-align: center;
+    background-color: blueviolet;
+    border: 1px solid #777;
+    width: 100%;
+    height: 50rpx;
+    margin: 20px auto;
+    line-height: 50rpx;
+}

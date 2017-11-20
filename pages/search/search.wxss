@@ -6,10 +6,13 @@
     /* align-items: center; */
     background-color: #eee;
     height: 60rpx;
+	width: 100%;
+    border: 2rpx solid #666;
+    margin-bottom: 20rpx;
 }
 
 .searchImg {
-    margin: auto 0 auto 20rpx;
+    margin: auto 10rpx auto 20rpx;
 }
 
 .placeholder {
@@ -19,7 +22,6 @@
 
 .search input {
     padding-left: 20rpx;
-    margin: auto auto auto 20rpx;
     width: 600rpx;
 }
 
